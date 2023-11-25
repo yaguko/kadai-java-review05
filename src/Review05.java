@@ -22,7 +22,8 @@ public class Review05 {
 
             // 2. DBと接続する
             con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/kadaidb?useSSL=false&allowPublicKeyRetrieval=true", "root", "keio5251");
+                    "jdbc:mysql://localhost/kadaidb?useSSL=false&allowPublicKeyRetrieval=true",
+                    "root", "keio5251");
 
             // 4. DBとやりとりする窓口（PreparedStatementオブジェクト）の作成
             String sql = "SELECT * FROM person where id = ?"; // 検索したい場所
@@ -36,6 +37,7 @@ public class Review05 {
             int num = Integer.parseInt(input);// 追記した★
             pstmt.setString(1, input); // setStringから変更★
             rs = pstmt.executeQuery();
+
 
             // 7. 結果を表示する
             while (rs.next()) {
