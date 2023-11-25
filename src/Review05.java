@@ -34,8 +34,8 @@ public class Review05 {
             String input = keyIn();
 
             // PreparedStatementオブジェクトの?に値をセット
-            int num = Integer.parseInt(input);// 追記した★
-            pstmt.setString(1, input); // setStringから変更★
+            int num = Integer.parseInt(input);// 追記した
+            pstmt.setString(1, input); // setStringから変更
             rs = pstmt.executeQuery();
 
 
